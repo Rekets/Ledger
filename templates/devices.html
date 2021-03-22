@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+
+                    {% for device in object_list %}
+                <div class="card-header">{{ device.device }}</div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        configuration: {{ device.configuration }}</h5>
+                    <h5 class="card-title">
+                        price: {{ device.price }} $</h5>
+                    <h5 class="card-title">paid by: {{ device.paid_by }}</h5>
+                    <h5 class="card-title">used by: {{ device.used_by }}</h5>
+                    <h5 class="card-title">comment: {{ device.comment }}</h5>
+                    <h5 class="card-title">start
+                        date: {{ device.start_date }}</h5>
+
+                </div>
+            {% endfor %}
+
+            </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    {% for obj in object_list %}
+
+        <h5> {{ obj.first_name }} {{ obj.last_name }}</h5>
+        <a href="{{ obj.id }}" class="btn a">detail</a>
+        <br>
+    {% endfor %}
+
+
+{% endblock %}

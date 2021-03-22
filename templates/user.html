@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="col4">
+        <div class="card" style="width: 18rem;">
+
+
+            <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+            <p class="card-text"> {{ user.phone }}</p>
+            <p class="card-text"> {{ user.departament }}</p>
+
+
+            <a class="btn btn-primary" href="/users/{{ user.pk }}/edit/"
+               role="button">Edit</a>
+        </div>
+    </div>
+    </div>
+{% endblock %}
