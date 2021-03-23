@@ -5,11 +5,13 @@
 
 
     {% for obj in object_list %}
-
+        <img src="{{ obj.avatar.url }}" width="100" height="auto" >
         <h5> {{ obj.first_name }} {{ obj.last_name }}</h5>
-        <a href="{{ obj.id }}" class="btn a">detail</a>
+        <a href="{{ obj.id }}" class="btn btn-primary">detail</a>
+        <br>
         <br>
     {% endfor %}
+
 
 
 {% endblock %}
